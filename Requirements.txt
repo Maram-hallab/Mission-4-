@@ -6,4 +6,5 @@ pandas
 requests
 pytz
 gunicorn
-flask-cors
+
+flask_cors
