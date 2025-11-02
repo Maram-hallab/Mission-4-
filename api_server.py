@@ -2,6 +2,7 @@ import joblib
 import numpy as np
 import pandas as pd # Added to read your .xlsx file if needed for column names
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from datetime import datetime
 import pytz  # For timezones
 import requests  # For weather
@@ -25,6 +26,7 @@ except FileNotFoundError:
 
 # --- 3. CREATE THE SERVER APP ---
 app = Flask(__name__)
+CORS(app) # This tells the server to allow requests from anywhere
 
 # --- 4. HELPER FUNCTIONS ---
 def get_weather_forecast():
