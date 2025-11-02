@@ -6,5 +6,5 @@ pandas
 requests
 pytz
 gunicorn
-
 flask_cors
+
